@@ -3,6 +3,6 @@
 
 Необходимо реализовать компонент создания слов из катринок:
 
-![picture-font](http://i.imgur.com/UiUvRxE.gif)
+![picture-font](https://media.giphy.com/media/TJDH0noxEqYsU/giphy.gif)
 
 ## Описание компонента
