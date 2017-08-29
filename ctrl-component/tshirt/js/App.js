@@ -41,14 +41,19 @@ class App extends React.Component {
                      ref={(fontPicker) => this.fontPicker = fontPicker}>
                     <h2>Select a font</h2>
                     <div className="font-picker">
+                        {/*TODO: Добавьте сюда выбор шрифта из доступных приложению*/}
+                        {/* РЕШЕНИЕ */}
                         {this.state.fonts.map(font => {
                             return <FontItem onChange={this.selectFont.bind(this)} font={font}
                                              selected={!!this.state.selectedFont && this.state.selectedFont.name === font.name}
                                              key={font.name}/>
                         })}
+                        {/* РЕШЕНИЕ */}
                     </div>
                 </div>
                 <div className="next-step grid-1">
+                    {/*TODO: Добавьте сюда поле для ввода текста*/}
+                    {/* РЕШЕНИЕ */}
                     {
                         this.state.selectedFont && (
                             <div className="type-text">
@@ -58,6 +63,10 @@ class App extends React.Component {
                             </div>
                         )
                     }
+                    {/* РЕШЕНИЕ */}
+
+                    {/*TODO: Добавьте сюда изображения текста шрифтом-картинками*/}
+                    {/* РЕШЕНИЕ */}
                     {
                         this.state.text && (
                             <div className="render-result">
@@ -65,6 +74,7 @@ class App extends React.Component {
                             </div>
                         )
                     }
+                    {/* РЕШЕНИЕ */}
                 </div>
             </div>
         );
