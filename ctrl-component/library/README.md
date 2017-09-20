@@ -35,3 +35,4 @@ BookApi.query("react").then(books => {
 
 Реализуйте компонент во вкладке JS(Babel). Перед началом работы сделайте форк этого пена:
 
+https://codepen.io/hoodsey20/pen/YrqMaX
