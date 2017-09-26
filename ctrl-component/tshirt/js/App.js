@@ -41,15 +41,11 @@ class App extends React.Component {
                      ref={(fontPicker) => this.fontPicker = fontPicker}>
                     <h2>Select a font</h2>
                     <div className="font-picker">
-                        {/*TODO: Добавьте сюда выбор шрифта из доступных приложению*/}
 
                     </div>
                 </div>
                 <div className="next-step grid-1">
-                    {/*TODO: Добавьте сюда поле для ввода текста*/}
 
-
-                    {/*TODO: Добавьте сюда изображения текста шрифтом-картинками*/}
 
                 </div>
             </div>

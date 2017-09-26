@@ -9,24 +9,24 @@
 
 Необходимо реализовать форму подписки на новости с встроенной валидацией.
 
-* При вводе невалидного email-адреса форма получает класс `is-error` и пользователю показывается сообщение с текстом `Please enter valid email`.
+* При вводе невалидного email-адреса форма получает класс `is-error` и пользователю показывается сообщение с текстом `Пожалуйста, проверьте корректность email`.
 * При вводе корректного email-адреса форма получает класс `is-valid`.
 
 HTML-структура формы:
 
-```
+```html
 <div class="subscribe__form">
-    <form class="form form--subscribe">
-        <h4 class="form-title">Sign up:</h4>
-        <div class="form-group">
-            <label for="input-email" class="sr-only">Email</label>
-            <input type="email" id="input-email" placeholder="Email" class="form-control"/>
-            <div class="form-error">Please enter valid email</div>
-            <button type="submit" class="form-next">
-            	<i class="material-icons">keyboard_arrow_right</i>
-            </button>
-        </div>
-    </form>
+  <form class="form form--subscribe">
+    <h4 class="form-title">Подписаться:</h4>
+    <div class="form-group">
+      <label for="input-email" class="sr-only">Email</label>
+      <input type="email" id="input-email" placeholder="Email" class="form-control"/>
+      <div class="form-error">Пожалуйста, проверьте корректность email</div>
+      <button type="submit" class="form-next">
+        <i class="material-icons">keyboard_arrow_right</i>
+      </button>
+    </div>
+  </form>
 </div>
 ```
 

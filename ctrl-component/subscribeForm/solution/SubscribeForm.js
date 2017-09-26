@@ -21,11 +21,11 @@ const SubscribeForm = ({postUrl}) => {
     return (
         <div className="subscribe__form">
             <form className="form form--subscribe" noValidate={true} onSubmit={onSubmit}>
-                <h4 className="form-title">Sign up:</h4>
+                <h4 className="form-title">Подписаться:</h4>
                 <div className="form-group">
                     <label htmlFor="input-email" className="sr-only">Email</label>
                     <input type="email" id="input-email" placeholder="Email" className="form-control"/>
-                    <div className="form-error">Please enter valid email</div>
+                    <div className="form-error">Пожалуйста, проверьте корректность email</div>
                     <button type="submit" className="form-next"><i className="material-icons">keyboard_arrow_right</i>
                     </button>
                 </div>
