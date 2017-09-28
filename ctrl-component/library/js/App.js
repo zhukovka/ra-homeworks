@@ -4,28 +4,24 @@ class App extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-            query: "All",
-            filteredBooks: [],
+            query: "React",
             books: []
         }
     };
 
     componentDidMount () {
-        BookApi.query("react").then(books => {
-            this.setState({books, filteredBooks: books})
+        BookApi.query(this.state.query).then(books => {
+            this.setState({books})
         })
     }
 
-    //РЕШЕНИЕ
-    filterBooksByAuthor = (e) => {
+
+    filterBooks = (e) => {
         let query = e.target.value;
-        let filteredBooks;
-        if (query === 'All') {
-            filteredBooks = this.state.books;                
-        } else {
-            filteredBooks = this.state.books.filter(book=> book.authors.indexOf(query) > -1);
-        }
-        this.setState({query, filteredBooks});
+        let re = new RegExp(query, "i");
+        BookApi.query(query).then(books => {
+            this.setState({books, query})
+        })    
     };
 
     render () {
@@ -33,20 +29,15 @@ class App extends React.Component {
             <div className="App">
                 <div className="search-books">
 
-
-                    <div className="search-books-buttons">
-                        <div className="search-books-buttons-wrapper">
-                            {/* РЕШЕНИЕ */}
-                            <Authorbutton current={this.state.query} books={this.state.books} chooseAuthor={this.filterBooksByAuthor} />
-                            {/* РЕШЕНИЕ */}
+                    <div className="search-books-bar">
+                        <div className="search-books-input-wrapper">
+                            <input type="text" placeholder="Search by title or author" value={this.state.query + ' (' + this.state.books.length + ')'}/>
                         </div>
-                    </div>   
-
+                    </div>
 
                     <div className="search-books-results">
-                        {/*TODO: Добавьте сюда книжки, которые подходят под фильтр*/}
                         {/* РЕШЕНИЕ */}
-                        {<Bookshelf books={this.state.filteredBooks}/>}
+                        {<Bookshelf books={this.state.books} chooseAuthor={this.filterBooks}/>}
                         {/* РЕШЕНИЕ */}
                     </div>
                 </div>

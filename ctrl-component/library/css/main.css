@@ -130,7 +130,26 @@ body, .app {
     margin-top: 10px;
 }
 .book-authors {
+    margin-top: 5px;
     color: #999;
+}
+
+.book-author {
+    display: block;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-align: left;
+    background-color: transparent;
+}
+
+.book-author + .book-author {
+    margin-top: 5px;
+}
+
+.book-author:hover {
+    color: #71e2b3;
+    cursor: pointer;
 }
 
 .book-top {

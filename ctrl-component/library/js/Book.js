@@ -1,4 +1,4 @@
-const Book = ({book}) => {
+const Book = ({book, chooseAuthor}) => {
     let backgroundImage = book.imageLinks && `url(${book.imageLinks.thumbnail})`;
     let style = {
         width: 128,
@@ -11,7 +11,11 @@ const Book = ({book}) => {
                 <div className="book-cover" style={style}></div>
             </div>
             <div className="book-title">{book.title}</div>
-            {book.authors && <div className="book-authors">{book.authors.join(" ")}</div>}
+            {book.authors && 
+                <div className="book-authors">
+                    {book.authors.map(author => <button value={author} onClick={chooseAuthor} className="book-author">{author}</button>)}
+                </div>
+            }
         </div>
     )
 };
