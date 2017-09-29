@@ -15,7 +15,6 @@ class App extends React.Component {
         })
     }
 
-
     filterBooks = (e) => {
         let query = e.target.value;
         let re = new RegExp(query, "i");
