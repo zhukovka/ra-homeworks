@@ -13,6 +13,7 @@ class App extends React.Component {
 
     componentDidMount () {
         this.setState({fonts: AbcApi.getFonts()});
+
     }
 
     selectFont (e, selectedFont) {
@@ -22,6 +23,7 @@ class App extends React.Component {
                 this.fontPicker.scrollTop = top;
             }
         });
+        console.log(selectedFont);
     }
 
     renderLines (text) {
